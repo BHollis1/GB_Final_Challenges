@@ -37,15 +37,15 @@ namespace MenuTests
         public void Arrange()
         {
             _repo = new MenuRepository();
-            _content = new MenuItems();
-            _repo.GetMenuItemsByName();
+            _content = new MenuItems(1, "Hamburger", "100% Angus Beef", "lettuce, mayo, onion, cheese, bacon, tomato, pickle", 6);
+            _repo.AddNewMenuItems(_content);
 
         }
         [TestMethod]
         public void DeleteMenuItems_ShouldReturnTrue()
         {
-            MenuItems foundMenuItems = _repo.GetMenuItemsByName();
-            bool removeMenuItem = _repo.DeleteMenuItems(foundMenuItems);
+            MenuItems foundMenuItem = _repo.GetMenuItemsByName("Hamburger");
+            bool removeMenuItem = _repo.DeleteMenuItemFromList(foundMenuItem);
             Assert.IsTrue(removeMenuItem);
 
         }

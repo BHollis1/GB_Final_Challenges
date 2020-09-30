@@ -11,10 +11,12 @@ namespace KomodoCafeMenu_Console
         private List<MenuItems> _menuList = new List<MenuItems>();
 
         //Create
-        public void AddNewMenuItems(MenuItems newMenuItems)
+        public bool AddNewMenuItems(MenuItems newMenuItem)
         {
-
-            _menuList.Add(newMenuItems);
+            int startingCount = _menuList.Count;
+            _menuList.Add(newMenuItem);
+            bool wasAdded = (_menuList.Count > startingCount) ? true : false;
+            return wasAdded;
         }
 
         //Read
@@ -26,26 +28,32 @@ namespace KomodoCafeMenu_Console
         //Update
 
         //Delete
-        public bool DeleteMenuItemFromList(string mealName)
+        //public bool DeleteMenuItemFromList(string mealName)
+        //{
+        //    MenuItems singleItem = GetMenuItemsByName(mealName);
+
+        //    if(singleItem == null)
+        //    {
+        //        return false;
+        //    }
+
+        //    int initialCount = _menuList.Count;
+        //    _menuList.Remove(singleItem);
+
+        //    if(initialCount > _menuList.Count)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        public bool DeleteMenuItemFromList(MenuItems content)
         {
-            MenuItems singleItem = GetMenuItemsByName(mealName);
-
-            if(singleItem == null)
-            {
-                return false;
-            }
-
-            int initialCount = _menuList.Count;
-            _menuList.Remove(singleItem);
-
-            if(initialCount > _menuList.Count)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            bool deleteResult = _menuList.Remove(content);
+            return deleteResult;
         }
 
 
@@ -53,7 +61,7 @@ namespace KomodoCafeMenu_Console
         {
             foreach (MenuItems singleItem in _menuList)
             {
-                if (singleItem.MealName == mealName)
+                if (singleItem.MealName.ToLower() == mealName)
                 {
                     return singleItem;
                 }
