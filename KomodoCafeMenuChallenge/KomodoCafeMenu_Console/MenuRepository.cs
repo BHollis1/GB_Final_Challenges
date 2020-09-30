@@ -8,19 +8,61 @@ namespace KomodoCafeMenu_Console
 {
     public class MenuRepository
     {
-        protected readonly List<MenuRepository> _menuDirectory = new List<MenuRepository>();
+        private List<MenuItems> _menuList = new List<MenuItems>();
 
-        public bool CreateNewMenuItems(MenuRepository newItems)
+        //Create
+        public void AddNewMenuItems(MenuItems newMenuItems)
         {
-            int startingCount = _menuDirectory.Count;
-            _menuDirectory.Add(newItems);
-            bool wasCreated = (_menuDirectory.Count > startingCount) ? true : false;
-            return wasCreated;
+
+            _menuList.Add(newMenuItems);
         }
 
-        public List<MenuRepository> GetAllMenuItems()
+        //Read
+        public List<MenuItems> GetMenuItems()//Read
         {
-            return _menuDirectory;
+            return _menuList;
         }
+
+        //Update
+
+        //Delete
+        public bool DeleteMenuItemFromList(string mealName)
+        {
+            MenuItems singleItem = GetMenuItemsByName(mealName);
+
+            if(singleItem == null)
+            {
+                return false;
+            }
+
+            int initialCount = _menuList.Count;
+            _menuList.Remove(singleItem);
+
+            if(initialCount > _menuList.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public MenuItems GetMenuItemsByName(string mealName)//Helper Method
+        {
+            foreach (MenuItems singleItem in _menuList)
+            {
+                if (singleItem.MealName == mealName)
+                {
+                    return singleItem;
+                }
+            }
+            return null;
+        }
+
+        
+
+        
     }
 }
