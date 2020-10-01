@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace KomodoCafeMenu_Console
 {
-    public class MenuItems
+    public class ChallengeOne_MenuItems
     {
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string MealDescription { get; set; }
         public string ListOfIngredients { get; set; }
         public decimal MealPrice { get; set; }
-        public MenuItems() { }
-        public MenuItems(int mealNum, string mealName, string mealDesc, string listOfIng, decimal mealPrice)
+        public ChallengeOne_MenuItems() { }
+        public ChallengeOne_MenuItems(int mealNum, string mealName, string mealDesc, string listOfIng, decimal mealPrice)
         {
             MealNumber = mealNum;
             MealName = mealName;
@@ -23,20 +23,7 @@ namespace KomodoCafeMenu_Console
             MealPrice = mealPrice;
         }
 
-        public void Run()
-        {
-            RunMenu();
-        }
-
-        private void RunMenu()
-        {
-            bool continueToRun = true;
-            while(continueToRun)
-            {
-                
-            }
-        }
-
+       
       
        
     }

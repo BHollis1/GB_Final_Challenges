@@ -6,13 +6,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MenuTests
 {
     [TestClass]
-    public class MenuRepositoryTests
+    public class ChallengeOne_MenuRepositoryTests
     {
         [TestMethod]
         public void AddNewMenuItems_ShouldReturnCorrectBoolean()
         {
-            MenuItems newMenuItems = new MenuItems();
-            MenuRepository repository = new MenuRepository();
+            ChallengeOne_MenuItems newMenuItems = new ChallengeOne_MenuItems();
+            ChallengeOne_MenuRepository repository = new ChallengeOne_MenuRepository();
 
             bool wasCreated = repository.AddNewMenuItems(newMenuItems);
             Assert.IsTrue(wasCreated);
@@ -20,31 +20,31 @@ namespace MenuTests
         [TestMethod]
         public void GetMenuItems_ShouldReturnAllItemsInCollection()
         {
-            MenuItems newObject = new MenuItems();
-            MenuRepository repo = new MenuRepository();
+            ChallengeOne_MenuItems newObject = new ChallengeOne_MenuItems();
+            ChallengeOne_MenuRepository repo = new ChallengeOne_MenuRepository();
             repo.AddNewMenuItems(newObject);
 
-            List<MenuItems> listOfMenuItems = repo.GetMenuItems();
+            List<ChallengeOne_MenuItems> listOfMenuItems = repo.GetMenuItems();
 
             bool menuDirectoryHasNewItems = listOfMenuItems.Contains(newObject);
             Assert.IsTrue(menuDirectoryHasNewItems);
         }
 
-        private MenuRepository _repo;
-        private MenuItems _content;
+        private ChallengeOne_MenuRepository _repo;
+        private ChallengeOne_MenuItems _content;
         [TestInitialize]
 
         public void Arrange()
         {
-            _repo = new MenuRepository();
-            _content = new MenuItems(1, "Hamburger", "100% Angus Beef", "lettuce, mayo, onion, cheese, bacon, tomato, pickle", 6);
+            _repo = new ChallengeOne_MenuRepository();
+            _content = new ChallengeOne_MenuItems(1, "Hamburger", "100% Angus Beef", "lettuce, mayo, onion, cheese, bacon, tomato, pickle", 6);
             _repo.AddNewMenuItems(_content);
 
         }
         [TestMethod]
         public void DeleteMenuItems_ShouldReturnTrue()
         {
-            MenuItems foundMenuItem = _repo.GetMenuItemsByName("Hamburger");
+            ChallengeOne_MenuItems foundMenuItem = _repo.GetMenuItemsByName("Hamburger");
             bool removeMenuItem = _repo.DeleteMenuItemFromList(foundMenuItem);
             Assert.IsTrue(removeMenuItem);
 

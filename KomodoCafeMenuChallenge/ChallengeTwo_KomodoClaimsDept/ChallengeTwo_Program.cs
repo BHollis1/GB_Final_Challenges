@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChallengeTwo_KomodoClaimsDept
 {
-    class Program
+    class ChallengeTwo_Program
     {
         static void Main(string[] args)
         {
+            ChallengeTwo_ProgramUI program = new ChallengeTwo_ProgramUI();
+            program.Run();
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChallengeTwo_KomodoClaimsDept
 {
-    public class ClaimRepository
+    public class ChallengeTwo_ClaimRepository
     {
-        protected readonly List<Claim> _claimDirectory = new List<Claim>();
+        protected readonly List<ChallengeTwo_Claim> _claimDirectory = new List<ChallengeTwo_Claim>();
 
         //Create
-        public bool AddNewClaim(Claim content)
+        public bool AddNewClaim(ChallengeTwo_Claim content)
         {
             int startingCount = _claimDirectory.Count;
             _claimDirectory.Add(content);
@@ -21,14 +21,14 @@ namespace ChallengeTwo_KomodoClaimsDept
 
         //Read
 
-        public List<Claim> GetClaims()
+        public List<ChallengeTwo_Claim> GetClaims()
         {
             return _claimDirectory;
         }
 
-        public Claim GetClaimByClaimID(int claimID)
+        public ChallengeTwo_Claim GetClaimByClaimID(int claimID)
         {
-            foreach (Claim singleClaim in _claimDirectory)
+            foreach (ChallengeTwo_Claim singleClaim in _claimDirectory)
             {
                 if (singleClaim.ClaimID == claimID)
                 {
@@ -39,9 +39,9 @@ namespace ChallengeTwo_KomodoClaimsDept
         }
 
         //Update
-        public bool UpdateExistingClaim(int originalClaimID, Claim newClaimInfo)
+        public bool UpdateExistingClaim(int originalClaimID, ChallengeTwo_Claim newClaimInfo)
         {
-            Claim oldClaimInfo = GetClaimByClaimID(originalClaimID);
+            ChallengeTwo_Claim oldClaimInfo = GetClaimByClaimID(originalClaimID);
 
             if (oldClaimInfo != null)
             {

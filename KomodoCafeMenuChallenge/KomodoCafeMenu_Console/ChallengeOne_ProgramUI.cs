@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace KomodoCafeMenu_Console
 {
 
-    class ProgramUI
+    class ChallengeOne_ProgramUI
     {
-        private MenuRepository _menuRepo = new MenuRepository();
+        private ChallengeOne_MenuRepository _menuRepo = new ChallengeOne_MenuRepository();
 
 
         // Method that runs/starts the application
@@ -66,7 +66,7 @@ namespace KomodoCafeMenu_Console
         private void AddMenuItem()
         {
             Console.Clear();
-            MenuItems newContent = new MenuItems();
+            ChallengeOne_MenuItems newContent = new ChallengeOne_MenuItems();
 
             //MealNum
             Console.WriteLine("Enter the number for the meal:");
@@ -96,9 +96,9 @@ namespace KomodoCafeMenu_Console
         private void ShowAllItems()
         {
             Console.Clear();
-            List<MenuItems> listOfItems = _menuRepo.GetMenuItems();
+            List<ChallengeOne_MenuItems> listOfItems = _menuRepo.GetMenuItems();
 
-            foreach(MenuItems content in listOfItems)
+            foreach(ChallengeOne_MenuItems content in listOfItems)
             {
                 Console.WriteLine($" MealName: {content.MealName}");
             }
@@ -109,7 +109,7 @@ namespace KomodoCafeMenu_Console
             Console.Clear();
             Console.WriteLine("Enter the name of the menu item you would like to see:");
             string mealName = Console.ReadLine();
-            MenuItems content = _menuRepo.GetMenuItemsByName(mealName);
+            ChallengeOne_MenuItems content = _menuRepo.GetMenuItemsByName(mealName);
 
             if(content != null)
             {
@@ -127,12 +127,12 @@ namespace KomodoCafeMenu_Console
 
         private void DeleteMenuItem()
         {
-            Console.Clear();
+           
 
             ShowAllItems();
             Console.WriteLine("Enter the name of the item you would like to remove:");
             string input = Console.ReadLine();
-            bool wasDeleted =  _menuRepo.DeleteMenuItemFromList(input);
+            bool wasDeleted = _menuRepo.DeleteMenuItemFromList(input);
             if (wasDeleted)
             {
                 Console.WriteLine("Item successfully deleted");
@@ -146,14 +146,21 @@ namespace KomodoCafeMenu_Console
         }
         private void SeedContentList()
         {
-            MenuItems hamburger = new MenuItems(1, "Hamburger", "100% Angus Beef", "lettuce, mayo, onion, cheese, bacon, tomato, pickle", 6);
-            MenuItems chiliCheeseFries = new MenuItems(2, "Chili Cheese Fries", "Fries smothered in chili and cheese", "French Fries, homemade chili, Sharp Cheddar cheese", 5);
-            MenuItems milkshake = new MenuItems(3, "Strawberry Milkshake", "strawberry ice cream with loads of strawberry pieces", "Strawberry Ice Cream, Strawberries, Milk, Sugar", 4);
+            ChallengeOne_MenuItems hamburger = new ChallengeOne_MenuItems(1, "Hamburger", "100% Angus Beef", "lettuce, mayo, onion, cheese, bacon, tomato, pickle", 6);
+            ChallengeOne_MenuItems chiliCheeseFries = new ChallengeOne_MenuItems(2, "Chili Cheese Fries", "Fries smothered in chili and cheese", "French Fries, homemade chili, Sharp Cheddar cheese", 5);
+            ChallengeOne_MenuItems milkshake = new ChallengeOne_MenuItems(3, "Strawberry Milkshake", "strawberry ice cream with loads of strawberry pieces", "Strawberry Ice Cream, Strawberries, Milk, Sugar", 4);
 
             _menuRepo.AddNewMenuItems(hamburger);
             _menuRepo.AddNewMenuItems(chiliCheeseFries);
             _menuRepo.AddNewMenuItems(milkshake);
 
         }
+       
+
+
+        
+            
+            
     }
+    
 }

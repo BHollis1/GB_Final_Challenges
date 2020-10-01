@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ChallengeTwo_Claim.cs" />
+    <Compile Include="ChallengeTwo_ClaimRepository.cs" />
+    <Compile Include="ChallengeTwo_ProgramUI.cs" />
+    <Compile Include="ChallengeTwo_Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

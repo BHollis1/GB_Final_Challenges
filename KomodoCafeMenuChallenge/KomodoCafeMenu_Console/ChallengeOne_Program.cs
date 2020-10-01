@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace KomodoCafeMenu_Console
 {
-    public class Program
+    public class ChallengeOne_Program
     {
         static void Main(string[] args)
         {
-            ProgramUI program = new ProgramUI();
+            ChallengeOne_ProgramUI program = new ChallengeOne_ProgramUI();
             program.Run();
         }
     }

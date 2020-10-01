@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafeMenu_Console", "KomodoCafeMenu_Console\KomodoCafeMenu_Console.csproj", "{4EBF4898-D4EF-49CC-816E-635DDB703EDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_KomodoCafeMenu_Console", "KomodoCafeMenu_Console\ChallengeOne_KomodoCafeMenu_Console.csproj", "{4EBF4898-D4EF-49CC-816E-635DDB703EDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuTests", "MenuTests\MenuTests.csproj", "{0C91D7BC-5431-441E-AA7E-A5F5D2374256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_KomodoCafeMenuTests", "MenuTests\ChallengeOne_KomodoCafeMenuTests.csproj", "{0C91D7BC-5431-441E-AA7E-A5F5D2374256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTwo_KomodoClaimsDept_Console", "ChallengeTwo_KomodoClaimsDept\ChallengeTwo_KomodoClaimsDept_Console.csproj", "{23BC1E92-0065-4F73-8707-FADCD8A806F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0C91D7BC-5431-441E-AA7E-A5F5D2374256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C91D7BC-5431-441E-AA7E-A5F5D2374256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C91D7BC-5431-441E-AA7E-A5F5D2374256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BC1E92-0065-4F73-8707-FADCD8A806F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BC1E92-0065-4F73-8707-FADCD8A806F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BC1E92-0065-4F73-8707-FADCD8A806F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BC1E92-0065-4F73-8707-FADCD8A806F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
