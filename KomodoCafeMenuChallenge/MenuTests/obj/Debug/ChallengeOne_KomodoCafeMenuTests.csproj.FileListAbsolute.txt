@@ -1,2 +1,0 @@
-C:\ElevenFiftyProjects\KomodoConsoleChallenge\KomodoCafeMenuChallenge\MenuTests\obj\Debug\ChallengeOne_KomodoCafeMenuTests.csprojAssemblyReference.cache
-C:\ElevenFiftyProjects\KomodoConsoleChallenge\KomodoCafeMenuChallenge\MenuTests\obj\Debug\ChallengeOne_KomodoCafeMenuTests.csproj.CoreCompileInputs.cache
